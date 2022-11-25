@@ -1,17 +1,21 @@
 import './App.css';
-import Nav from './components/Nav';
-import Content from './components/Content';
-
+import Content from './components/subComponents/Content'
+import Nav from './components/subComponents/Nav'
+import Home from './components/Home';
+import Details from './components/Details';
+import { Route, Router } from 'react-router-dom'
 
 export default function App() {
   return (
+    <Router>
     <div className="App">
       <header className="App-header">
         <div>
-          <Nav/>
-          <Content />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/details" component={Details} />
         </div>
       </header>
     </div>
+    </Router>
   );
 }
