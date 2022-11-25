@@ -1,13 +1,78 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  background-color: rgb(197, 221, 89);
 }
+
+.nav-bar-first {
+  justify-content: space-between;
+  align-items: center;
+  background-color: chartreuse;
+}
+
+.nav-bar-first-items {
+  list-style: none;
+  display: flex;
+}
+
+.nav-bar-first-items > li {
+  padding: 5%;
+}
+
+.SearchBar {
+  padding: 2px;
+  width: 50%;
+  margin-left: 20%;
+  margin-top: 5%;
+  
+}
+
+.searchIcone {
+  width: 20px;
+  height: 20px;
+}
+
+.search-btn button{
+  background-color: var(--secondary-color);
+  box-shadow: inset 0 5px 10px var(--primary-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0 2rem 2rem 0;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  border: 1px solid var(--primary-color);
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+  margin: 20px;
+}
+
+.OnTV {
+  grid-column: 1;
+  grid-row: 2 / 5;
+}
+
+.FeaturedLists {
+  grid-column: 2 / 4;
+  grid-row: 1 / 3;
+}
+
+.News {
+  grid-column: 3;
+  grid-row: 4;
+}
+
+.WeekRelease {
+  grid-column: 2;
+  grid-row: 4;
+}
+
